@@ -37,10 +37,10 @@ const ProjectsSection = () => {
               ))}
             </div>
             <div className="buttons">
-              <a href={project.liveDemo} className="btn live-demo" target="_blank" rel="noreferrer">
+              <a href={project.liveLink} className="btn live-demo" target="_blank" rel="noreferrer">
                 Live Demo ↗
               </a>
-              <a href={project.sourceCode} className="btn view-source" target="_blank" rel="noreferrer">
+              <a href={project.sourceLink} className="btn view-source" target="_blank" rel="noreferrer">
                 <i className="fab fa-github"></i> View Source
               </a>
             </div>
