@@ -1,4 +1,4 @@
-// server.js
+
 import express from 'express';
 import multer from 'multer';
 import cors from 'cors';
@@ -6,16 +6,16 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import fs from 'fs';
 
-// ES Modules alternative for __dirname
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = 3000;
 
-// Set your React app origin
+
 app.use(cors({
-  origin: 'http://localhost:5173' // Change to your frontend port if different
+  origin: 'http://localhost:5173' 
 }));
 app.use(express.json());
 
@@ -29,10 +29,10 @@ const fileFilter = (req, file, cb) => {
   }
 };
 
-// Set storage to React public/uploads directory
+// I'm Setting storage to React public/uploads directory (dev binoculars)
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    const uploadPath = path.join(__dirname, 'public', 'uploads'); // Adjust 'client' to your folder name
+    const uploadPath = path.join(__dirname, 'public', 'uploads');
 
     // Create directory if it doesn't exist
     if (!fs.existsSync(uploadPath)) {
